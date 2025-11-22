@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* PAGE */
+.page {
+  background: #3b3b4a;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* TABLE WRAPPER */
+.table-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.35);
+  overflow: visible; /* important for dropdowns */
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #f5f5fb;
+}
+
+.table th {
+  padding: 14px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+}
+
+.table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f0f5;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* ENTITY */
+.entity-link {
+  color: #5b3fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* EDIT BUTTON */
+.edit-btn {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.edit-btn:hover {
+  background: #f5f3ff;
+  border-color: #5b3fff;
+}
+
+/* GENDER PILL */
+.pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pill-male {
+  background: #ffe5ea;
+  color: #d3224c;
+}
+
+.pill-female {
+  background: #e2f2ff;
+  color: #1f6fd8;
+}
+
+/* COUNTRY HEADER + FILTER ICON */
+.country-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-container {
+  position: relative;
+}
+
+.filter-icon {
+  cursor: pointer;
+  color: #5b3fff;
+}
+
+/* FILTER DROPDOWN */
+.filter-dropdown {
+  position: absolute;
+  top: 22px;
+  right: 0;
+  background: #ffffff;
+  width: 180px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  padding: 8px 0;
+  z-index: 60;
+  max-height: 260px;
+  overflow-y: auto;
+  animation: scaleIn 0.18s ease;
+}
+
+.filter-item {
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.filter-item:hover {
+  background: #f5f5fb;
+}
+
+.filter-checkbox {
+  color: #5b3fff;
+}
+
+/* COUNTRY DROPDOWN IN MODAL */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-box {
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-box-open {
+  border-color: #5b3fff;
+  box-shadow: 0 0 0 1px #5b3fff;
+}
+
+.dropdown-placeholder {
+  color: #9ca3af;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 46px;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  z-index: 200; /* raised above modal */
+  max-height: 260px;
+  overflow-y: auto;
+  animation: scaleIn 0.18s ease;
+}
+
+.dropdown-item {
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f5f5fb;
+}
+
+.check-icon {
+  color: #5b3fff;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+/* MODAL */
+.modal {
+  width: 560px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.45);
+  overflow: visible !important; /* FIX: allow dropdown to expand */
+}
+
+/* modal header */
+.modal-header {
+  position: relative;
+  padding: 20px 28px 16px;
+  border-bottom: 1px solid #f0f0f5;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* close button */
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4b5563;
+  transition: background 0.15s ease;
+}
+
+.modal-close:hover {
+  background: #e5e7eb;
+}
+
+/* modal body */
+.modal-body {
+  padding: 24px 28px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: visible !important; /* FIX */
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.modal-body input:focus {
+  outline: none;
+  border-color: #5b3fff;
+  box-shadow: 0 0 0 1px #5b3fff;
+}
+
+/* modal footer */
+.modal-footer {
+  padding: 18px 28px 22px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #f0f0f5;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  color: #6b7280;
+}
+
+.btn-secondary:hover {
+  background: #f9fafb;
+}
+
+.btn-primary {
+  background: #5b3fff;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #4a31e0;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.scale-in {
+  animation: scaleIn 0.25s ease;
+}
+
+.scale-up {
+  animation: scaleUp 0.25s ease;
+}
+
+.row-anim {
+  animation: fadeRow 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: translateY(10px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeRow {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* LOADING */
+.loading-text {
+  color: #f9fafb;
+  font-size: 16px;
+}
