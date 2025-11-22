@@ -60,4 +60,66 @@ https://inkle-assignment-frontend-app.netlify.app/
 ---
 
 ## 📂 Folder Structure
+inkle-assignment-frontend-app/
+│── public/
+│── src/
+│ ├── components/
+│ │ ├── Table.jsx
+│ │ ├── EditModal.jsx
+│ ├── services/
+│ │ ├── api.js
+│ ├── App.jsx
+│ ├── main.jsx
+│── package.json
+│── README.md
+
+
+---
+
+## 🔗 API Endpoints
+
+### ➤ Get all tax records
+
+
+GET https://685013d7e7c42cfd17974a33.mockapi.io/taxes
+
+
+### ➤ Get all countries
+
+
+GET https://685013d7e7c42cfd17974a33.mockapi.io/countries
+
+
+### ➤ Update a record
+
+
+PUT https://685013d7e7c42cfd17974a33.mockapi.io/taxes/:id
+
+
+**Example payload:**
+```json
+{
+  "name": "Ravi",
+  "country": "India"
+}
+
+🧩 How Editing Works
+
+User clicks Edit on a row
+
+Modal opens with pre-filled values
+
+Country list loads from API
+
+User modifies data
+
+Clicking Save sends PUT request
+
+Table updates instantly
+
+🚀 Installation & Setup
+git clone https://github.com/Sandeepna2/inkle-assignment-frontend-app.git
+cd inkle-assignment-frontend-app
+npm install
+npm run dev
 
