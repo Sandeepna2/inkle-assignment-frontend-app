@@ -10,8 +10,42 @@ https://inkle-assignment-frontend-app.netlify.app/
 ## 🎥 Full Demo Video
 [🎬 Click here to watch the full demo](https://raw.githubusercontent.com/Sandeepna2/inkle-assignment-frontend-app/main/inkle_recording.webm) 
 
-<img width="1357" height="766" alt="image" src="https://github.com/user-attachments/assets/e6efd823-fb0b-4163-82da-27cde1630157" />
-Table View
+## 🖼️ App Screenshots
+<table>
+  <tr>
+    <td>
+      <h3>🟣 Table View</h3>
+       <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/55096eee-759b-4819-9086-794b1bd59613" />
+    </td>
+    <td>
+      <h3>🟣 Edit Modal</h3>
+      <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/e1738b53-b032-45c3-9211-9306962098ea" />  
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h3>🟣 Country Dropdown</h3>
+      <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/ed15b393-eca0-4ca7-8493-79e719d5b405" />
+    </td>
+    <td>
+      <h3>🟣 Updated Table After Edit</h3>
+      <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/69460721-d1e3-449a-8efe-2ed3e0e057a1" />
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <h3>🟣 Full Data Table View</h3>
+      <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/abddb621-4896-422a-9d03-a9134412cbb9" />
+    </td>
+    <td>
+      <h3>🟣 Country Filter</h3>
+      <img width="600" height="350" alt="image" src="https://github.com/user-attachments/assets/45ba2b77-d765-41c7-bb4f-59c7e57438ac" />
+    </td>
+  </tr>
+</table>
+
 
 ## 📌 Features
 ### ✔️ Fetch & Display Data
