@@ -1,8 +1,6 @@
 # Inkle Assignment — Frontend
 
-A frontend assignment built using **React + Vite** as part of Inkle’s interview task.  
-The project includes a dynamic table using **@tanstack/react-table**, an edit modal,  
-API integration, and a country selector.
+A frontend assignment built using **React + Vite** as part of Inkle’s interview task.The project includes a dynamic table using **@tanstack/react-table**, an edit modal, API integration, and a country selector.
 
 ---
 
@@ -52,74 +50,57 @@ https://inkle-assignment-frontend-app.netlify.app/
 
 - **React + Vite**  
 - **@tanstack/react-table**  
-- **Tailwind CSS**  
+- **CSS**  
 - **Axios**  
 - **MockAPI**  
 - **React Hooks**  
 
 ---
 
+
 ## 📂 Folder Structure
 inkle-assignment-frontend-app/
 │── public/
 │── src/
-│ ├── components/
-│ │ ├── Table.jsx
-│ │ ├── EditModal.jsx
-│ ├── services/
-│ │ ├── api.js
-│ ├── App.jsx
-│ ├── main.jsx
+│   ├── components/
+│   │   ├── Table.jsx
+│   │   ├── EditModal.jsx
+│   ├── services/
+│   │   ├── api.js
+│   ├── App.jsx
+│   ├── main.jsx
 │── package.json
 │── README.md
 
-
----
-
 ## 🔗 API Endpoints
-
 ### ➤ Get all tax records
-
-
 GET https://685013d7e7c42cfd17974a33.mockapi.io/taxes
 
-
 ### ➤ Get all countries
-
-
 GET https://685013d7e7c42cfd17974a33.mockapi.io/countries
 
-
 ### ➤ Update a record
-
-
 PUT https://685013d7e7c42cfd17974a33.mockapi.io/taxes/:id
 
-
-**Example payload:**
-```json
+### ✔️ Example Payload
 {
   "name": "Ravi",
   "country": "India"
 }
 
-🧩 How Editing Works
+## 🧩 How Editing Works
+- User clicks Edit on a row
+- Modal opens with existing values
+- Country list loads from API
+- User edits data
+- Clicking Save sends PUT request
+- Table updates immediately
 
-User clicks Edit on a row
-
-Modal opens with pre-filled values
-
-Country list loads from API
-
-User modifies data
-
-Clicking Save sends PUT request
-
-Table updates instantly
-
-🚀 Installation & Setup
+## 🚀 Installation & Setup
 git clone https://github.com/Sandeepna2/inkle-assignment-frontend-app.git
 cd inkle-assignment-frontend-app
 npm install
 npm run dev
 
+Open the app at:
+http://localhost:5173
