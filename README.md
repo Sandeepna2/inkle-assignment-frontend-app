@@ -10,6 +10,7 @@ https://inkle-assignment-frontend-app.netlify.app/
 ## 🎥 Full Demo Video
 [🎬 Click here to watch the full demo](https://raw.githubusercontent.com/Sandeepna2/inkle-assignment-frontend-app/main/inkle_recording.webm) 
 
+
 ## 🖼️ App Screenshots
 <table>
   <tr>
